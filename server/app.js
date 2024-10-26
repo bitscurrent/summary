@@ -7,7 +7,8 @@ const app = express()
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'chrome-extension://gelacbjlhbehdpcfofhcjdejliodhlhg' // extension origin
+
+    // 'chrome-extension://gelacbjlhbehdpcfofhcjdejliodhlhg' // extension origin
   ];
   
   // Configure CORS
@@ -27,10 +28,9 @@ const allowedOrigins = [
   // Routes import
   import userRouter from "./src/routers/user.router.js";
 
-  
   // routes declaration
-  app.use("/api/v1/users", userRouter);
+  app.use("/api/v1/users/auth", userRouter);
   
-
+// http://localhost:3000/api/v1/users/registerUser
 
 export default app;
